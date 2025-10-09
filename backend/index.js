@@ -24,7 +24,10 @@ app.use("/api/listing",listingRouter )
 app.use("/api/booking",bookingRouter )
 
 
-app.listen(port,()=>{
-    connectDb()
-    console.log("server started")
-})
+connectDb().then(() => {
+    app.listen(port, () => {
+        console.log(`Server running on port ${port}`);
+    });
+}).catch((err) => {
+    console.error("❌ Failed to connect to DB", err);
+});
