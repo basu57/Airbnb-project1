@@ -9,7 +9,7 @@ import userRouter from "./routes/user.route.js"
 import listingRouter from "./routes/listing.route.js"
 import bookingRouter from "./routes/booking.route.js"
 let port = process.env.PORT || 6000
-
+const cors = require('cors');
 let app = express()
 app.use(express.json())
 app.use(cookieParser())
