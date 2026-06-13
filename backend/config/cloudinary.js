@@ -1,4 +1,4 @@
-git remote -vimport { v2 as cloudinary } from 'cloudinary';
+import { v2 as cloudinary } from 'cloudinary';
 import fs from "fs"
 
 const uploadOnCloudinary = async (filepath) => {
